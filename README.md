@@ -8,4 +8,4 @@ Study notes that I am taking for the exam. Using the Sander van Vugt videos and 
 <p>cat /etc/passwd</p>
 <p>groupmod</p>
 <h3>Creating Partitions</h3>
-<p><img src=""></p>
+<p><img src="Screenshot 2023-08-27 213830.png"></p>
