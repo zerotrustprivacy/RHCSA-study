@@ -15,3 +15,5 @@ Study notes that I am taking for the exam. Using the Sander van Vugt videos and 
 <p><img src ="unmount.png"></p> 
 <h3> Create a Swap</h3>
 <p><img src ="swap.png"></p>
+<h3> Resize Logical Volumes and Volume Groups</h3>
+<p><img src="lvmgroups.png"</p>
