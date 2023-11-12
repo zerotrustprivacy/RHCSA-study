@@ -25,3 +25,9 @@ Study notes that I am taking for the exam. Using the Sander van Vugt videos and 
   <li>Day of Week</li>
   <li>Command</li>
 </ul></p></p>
+<h3>Manage Temporary Files</h3>
+<p>The systemd-tmpfiles-setup service runs the systemd-tmpfiles command.</p>
+<p>systemd-tmpfiles-clean service configuration files exist in three places:
+/etc/tmpfiles.d/*.conf
+/run/tmpfiles.d/*.conf
+/usr/lib/tmpfiles.d/*.conf</p>
