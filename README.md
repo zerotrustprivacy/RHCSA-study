@@ -1,7 +1,8 @@
 # RHCSA-study
-Study notes that I am taking for the exam. Using the Sander van Vugt videos and books.
-<h3>The beginning:</h3>
-<p>I'm starting these notes after I'm already a quarter of the way into the material. I'm finding that most of the information from the Sander van Vugt videos is a review. I'm following along using my own RHEL Server that I installed onto VMware Workstation.. I have also started reading the RHEL book to make sure that I'm really understanding the concepts.</p>
+Study notes for the exam.
+<h2>Resources: I am using the Sander van Vugt course and his RHCSA 9 textbook to prepare for this exam.</h2>
+
+<h3>Configure Users and Permissions</h3>
 <h3>Creating Partitions</h3>
 <p><img src="Screenshot 2023-08-27 213830.png"></p>
 <h3> Make File System</h3>
@@ -26,8 +27,11 @@ Study notes that I am taking for the exam. Using the Sander van Vugt videos and 
   <li>Command</li>
 </ul></p></p>
 <h3>Manage Temporary Files</h3>
-<p>The systemd-tmpfiles-setup service runs the systemd-tmpfiles command.</p>
+<p>Red Hat includes the systemd-tmpfiles tool - provides a method to manage temporary directories and files. The systemd-tmpfiles-setup service runs the systemd-tmpfiles command.</p>
 <p>systemd-tmpfiles-clean service configuration files exist in three places:
 /etc/tmpfiles.d/*.conf
 /run/tmpfiles.d/*.conf
 /usr/lib/tmpfiles.d/*.conf</p>
+<h3>Analyze and Store Logs</h3>
+<p>The rsyslog service is used to determine for handle log messages. </p>
+<p>The logrotate command rotates log files to prevent them from taking too much space in the /var/log directory. When a log is rotated, it is renamed with an extension.</p>
