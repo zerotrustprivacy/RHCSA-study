@@ -1,6 +1,6 @@
 # RHCSA-study
 Study notes for the exam.
-<h2>Resources: I am using the Sander van Vugt course and his RHCSA 9 textbook to prepare for this exam.</h2>
+<h2>Resources: I am using the Sander van Vugt course and his RHCSA 9 textbook to prepare for this exam. Both can be found on the <a href= "https://learning.oreilly.com"> O'Reilly learning platform.</a></h2>
 
 <h3>Configure Users and Permissions</h3>
 <h3>Creating Partitions</h3>
