@@ -35,3 +35,8 @@ Study notes for the exam.
 <h3>Analyze and Store Logs</h3>
 <p>The rsyslog service is used to determine for handle log messages. </p>
 <p>The logrotate command rotates log files to prevent them from taking too much space in the /var/log directory. When a log is rotated, it is renamed with an extension.</p>
+<p>journalctl retrieves all log messages. </p>
+<p>-r shows the most recent logs</p>
+<p>-p shows the priority level</p>
+<p>-b shows the current system boot</p>
+<p>The system has its own journal located at system.journal. Indiviual users have their own journals pertaining to their own transacions inside of file called user-userid </p>
