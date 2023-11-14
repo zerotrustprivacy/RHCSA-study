@@ -29,6 +29,11 @@ Study notes for the exam.
     <li>Red Hat System Administration I (RH124)</li>
     <li>Red Hat System Administration II (RH134)</li>
   </ul></p>
+<h3>File System</h3>
+<p>Files on a linux system are organized into a single file-system hierarchy</p>
+<p>mkdir (make directory), rmdir (remove directory), cp (copy), and mv (move) are commands to manage files.</p>
+<p>Hard links</p>
+<p>Soft links</p>
 
 <h3>Configure Users and Permissions</h3>
 <h3>Creating Partitions</h3>
@@ -39,8 +44,10 @@ Study notes for the exam.
 <p><img src ="unmount.png"></p> 
 <h3> Create a Swap</h3>
 <p><img src ="swap.png"></p>
+
 <h3> Resize Logical Volumes and Volume Groups</h3>
 <p><img src="lvmgroups.png"</p>
+  
 <h3>Schedule Jobs</h3>
   
 <p>Schedule jobs to run  on a repeating schedule with a user's crontab file. </p>
