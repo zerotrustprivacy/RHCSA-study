@@ -1,6 +1,34 @@
 # RHCSA-study
 Study notes for the exam.
-<h2>Resources: I am using the Sander van Vugt course and his RHCSA 9 textbook to prepare for this exam. Both can be found on the <a href= "https://learning.oreilly.com"> O'Reilly learning platform.</a></h2>
+
+<h2>Topics covered:</h2>
+<p>
+  <ul>
+    <li>Managing physical storage</li>
+  <li>Install and configure software components and services</li>
+  <li>Establish network connections</li>
+  <li>Monitor and manage running processes</li>
+  <li>Manage and secure files and file systems</li>
+  <li>Administer users and groups</li>
+  <li>Review the system log files and journal for issues</li>
+  <li>Remotely manage systems with SSH and the Web Console</li>
+    <li>Install Red Hat Enterprise Linux using scalable methods</li>
+    <li>Access security files, file systems, and networks</li>
+    <li>Execute shell scripting and automation techniques</li>
+    <li>Manage storage devices, logical volumes, and file systems</li>
+    <li>Manage security and system access</li>
+    <li>Control the boot process and system services</li>
+  </ul>
+</p>
+<h2>Resources: </h2>
+<p>
+  <ul>
+    <li>Sander van Vugt RHCSA 9 course</li>
+    <li>RHCSA 9 Textbook </li>
+    (Both can be found on the <a href= "https://learning.oreilly.com"> O'Reilly learning platform.)</a>
+    <li>Red Hat System Administration I (RH124)</li>
+    <li>Red Hat System Administration II (RH134)</li>
+  </ul></p>
 
 <h3>Configure Users and Permissions</h3>
 <h3>Creating Partitions</h3>
