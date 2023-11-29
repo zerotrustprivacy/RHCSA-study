@@ -29,6 +29,16 @@ Study notes for the exam.
     <li>Red Hat System Administration I (RH124)</li>
     <li>Red Hat System Administration II (RH134)</li>
   </ul></p>
+<h3>Using vim</h3> 
+<p>Create file by using the command "vim <file name> "</p>
+<p>When in vim use "i" to get to INSERT mode and begin typing.</p>
+ <p>o = new line</p>
+    <p>ctrl + c = command mode</p>
+  <p>v = visual mode</p>
+  <p>dd = delete current line</p>
+  <p>gg = top of the document</p>
+  <p>^ = start of the line</p>
+  <p>:wq = save and exit</p>
 <h3>File System</h3>
 <p>Files on a linux system are organized into a single file-system hierarchy</p>
 <p>mkdir (make directory), rmdir (remove directory), cp (copy), and mv (move) are commands to manage files.</p>
