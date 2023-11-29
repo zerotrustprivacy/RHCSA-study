@@ -25,7 +25,7 @@ Study notes for the exam.
   <ul>
     <li>Sander van Vugt RHCSA 9 course</li>
     <li>RHCSA 9 Textbook </li>
-    (Both can be found on the <a href= "https://learning.oreilly.com"> O'Reilly learning platform.)</a>
+    Both can be found on the <a href= "https://learning.oreilly.com"> O'Reilly learning platform.</a>
     <li>Red Hat System Administration I (RH124)</li>
     <li>Red Hat System Administration II (RH134)</li>
   </ul></p>
