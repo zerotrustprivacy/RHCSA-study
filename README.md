@@ -65,8 +65,15 @@ Study notes for the exam.
   <li>Modify user: usermod</li>
   <li>Add group: groupadd</li>
   <li>Modify group: groupmod</li>
+  <li>Change permission: chmod</li>
+  <li>Change ownership: chown</li>
 </ul>
 
+<h3>File Access</h3>
+<ul>
+  <li>Read # Write # Execute</li>
+  <li>Owning User # Owning Group # Other</li>
+</ul>
 
 <h3>Creating Partitions</h3>
 <p><img src="Screenshot 2023-08-27 213830.png"></p>
