@@ -53,6 +53,7 @@ Study notes for the exam.
   <li>Sudo Config: /etc/sudoers.d/user</li>
   <li>Password info: /etc/passwd</li>
   <li>Group info: /etc/group</li>
+  <li>SSH Config & Password Auth: /etc/ssh/sshd_config</li>
   
 </ul>
 
