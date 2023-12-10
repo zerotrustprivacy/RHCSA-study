@@ -57,6 +57,17 @@ Study notes for the exam.
 </ul>
 
 <h3>Configure Users and Permissions</h3>
+<ul>
+  <li>To change a user's password on log in: chage -d 0 user</li>
+  <li>Change expiration date for password: chage -M 30 user</li>
+  <li>Check user password expiration: chage -l user</li>
+  <li>Add user: useradd</li>
+  <li>Modify user: usermod</li>
+  <li>Add group: groupadd</li>
+  <li>Modify group: groupmod</li>
+</ul>
+
+
 <h3>Creating Partitions</h3>
 <p><img src="Screenshot 2023-08-27 213830.png"></p>
 <h3> Make File System</h3>
