@@ -45,6 +45,17 @@ Study notes for the exam.
 <p>Hard links</p>
 <p>Soft links</p>
 
+<h3>Configuration Files</h3>
+<h4>Important File Locations</h4>
+<ul>
+  <li>Source File: ~/.bashrc</li>
+  <li>Password Config: /etc/login.defs/user</li>
+  <li>Sudo Config: /etc/sudoers.d/user</li>
+  <li>Password info: /etc/passwd</li>
+  <li>Group info: /etc/group</li>
+  
+</ul>
+
 <h3>Configure Users and Permissions</h3>
 <h3>Creating Partitions</h3>
 <p><img src="Screenshot 2023-08-27 213830.png"></p>
