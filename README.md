@@ -88,8 +88,7 @@ Study notes for the exam.
 <h3> Resize Logical Volumes and Volume Groups</h3>
 <p><img src="lvmgroups.png"</p>
   
-<h3>Schedule Jobs</h3>
-  
+<h3>Schedule Jobs </h3> 
 <p>Schedule jobs to run  on a repeating schedule with a user's crontab file. </p>
 <p> "man at" shows how to execute schedule jobs. These are one time jobs. For example: "at now +3min" runs a job 3 min from now.</p>
 <p>"atq" lists scheduled jobs. "atrm" removes the job.</p>
@@ -121,4 +120,26 @@ Study notes for the exam.
 
 <h3>Manage Compressed tar Archives</h3>
 <p>An archive is a file that contains multiple files. "tar" is the command to create manage and extract archives. </p>
-<p></p>
+<p>Command: dnf list - lists installed and available packages</p>
+<p> Use dnf install -y software to install </p>
+
+<h3> Manage Process and jobs</h3>
+<p>command & starts ajob in the background.</p> 
+<p>Jobs- to view all running jobs </p>
+<p> A runnable process can be stopped with CTRL+z </p>
+<p> The ps command shows current running processes </p>
+<p> the top command shows the highest running processes </p>
+<p> ps -fU user ... for a user's processes </p>
+<p> Use "Kill" or "killall dd" to kill processes. To kill a ZOMBIE process </p>
+<p> Process Priorities 
+<p>
+  <ul> 
+  <li> Nice and Renice can be used to change priorities of non realtime processes </li>
+  <li> Nice ranges from -20 to 19. Positive values means lower priority.</li>
+  <li> Use " Cat /proc/sys/vm/swappiness" to see the value then use "echo _ _ /proc/sys/vm/swappiness" to change it. To make it persistent " cat >> swappiness.conf << EOF" </li>
+  <li> loginctl list-user : shows users currently loggedin.  loginctl terminate-user:to stop a user session </li> 
+  
+  </ul> 
+</p>
+</p>
+
