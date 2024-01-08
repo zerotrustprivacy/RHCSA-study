@@ -146,17 +146,16 @@ Study notes for the exam.
 <p>
 <ul>
   <li> systemct1 edit unit.service : to edit unit files </li>
-  < li >systemctl list-dependencies for a complete overview of dependencies</li>
-  < li > Mask services : use Systemctl Stop (service) then systemctl mask (service) </li>
-  < li >Example: systemctl Status httpd [disabled] ...systemctl enable httpd...</li>
+  <li>systemctl list-dependencies for a complete overview of dependencies</li>
+  <li> Mask services : use Systemctl Stop (service) then systemctl mask (service) </li>
+  <li>Example: systemctl Status httpd [disabled] ...systemctl enable httpd...</li>
 </ul>
 </p>
 
-<h2> Task Scheduling </h2>
+<h2> </h2>
 <p>
 <ul>
-  <li> Schedule tasks with "Cron"... "crontab-e" to create a scheduled task </li>
-  ## crontime specifications: min, hr, day of menth, month, days of week
+  <li> 
 </ul>
 </p>
 
