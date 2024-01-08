@@ -108,6 +108,9 @@ Study notes for the exam.
 /etc/tmpfiles.d/*.conf
 /run/tmpfiles.d/*.conf
 /usr/lib/tmpfiles.d/*.conf</p>
+<p> In the config file, specify what to do... echo "d/etc/</p>
+
+
 <h3>Analyze and Store Logs</h3>
 <p>The rsyslog service is used to determine for handle log messages. </p>
 <p>The logrotate command rotates log files to prevent them from taking too much space in the /var/log directory. When a log is rotated, it is renamed with an extension.</p>
