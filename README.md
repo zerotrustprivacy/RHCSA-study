@@ -127,21 +127,20 @@ Study notes for the exam.
 <p> Use dnf install -y software to install </p>
 
 <h3> Manage Process and jobs</h3>
-<p>command & starts ajob in the background.</p> 
+<p>command & starts a job in the background.</p> 
 <p>Jobs- to view all running jobs </p>
 <p> A runnable process can be stopped with CTRL+z </p>
 <p> The ps command shows current running processes </p>
-<p> the top command shows the highest running processes </p>
+<p> The "top" command shows the highest running processes </p>
 <p> ps -fU user ... for a user's processes </p>
 <p> Use "Kill" or "killall dd" to kill processes. To kill a ZOMBIE process </p>
 <p> Process Priorities 
 <p>
   <ul> 
-  <li> Nice and Renice can be used to change priorities of non realtime processes </li>
+  <li> Nice and Renice can be used to change priorities of non-realtime processes </li>
   <li> Nice ranges from -20 to 19. Positive values means lower priority.</li>
   <li> Use " Cat /proc/sys/vm/swappiness" to see the value then use "echo _ _ /proc/sys/vm/swappiness" to change it. To make it persistent " cat >> swappiness.conf << EOF" </li>
-  <li> loginctl list-user : shows users currently loggedin.  loginctl terminate-user:to stop a user session </li> 
-  
+  <li> loginctl list-user: shows users currently logged in.  loginctl terminate-user: to stop a user session </li> 
   </ul> 
 </p>
 </p>
@@ -155,10 +154,13 @@ Study notes for the exam.
 </ul>
 </p>
 
-<h2> </h2>
+<h2> Configure Logging</h2>
 <p>
 <ul>
-  <li> 
+  <li>Preserve the systemd journal: check settings in /etc/systemd/journal.conf. The setting "STORAGE=AUTO" ensures that persistent storage is happening automatically. Make directory /var/log/journal. Restart service: systemctl restart systemd-journald.</li>
+  <li>Logrotate is started by a systemd timer to prevent disks from filling up. "systemctl cat logrotate.conf" to view the settings for logrotate.</li>
+  <li>Make sure that the /var/log/journal exists</li>
+  <li>C</li>
 </ul>
 </p>
 
