@@ -160,7 +160,17 @@ Study notes for the exam.
   <li>Preserve the systemd journal: check settings in /etc/systemd/journal.conf. The setting "STORAGE=AUTO" ensures that persistent storage is happening automatically. Make directory /var/log/journal. Restart service: systemctl restart systemd-journald.</li>
   <li>Logrotate is started by a systemd timer to prevent disks from filling up. "systemctl cat logrotate.conf" to view the settings for logrotate.</li>
   <li>Make sure that the /var/log/journal exists</li>
-  <li>C</li>
 </ul>
 </p>
-
+<h2> SELinux </h2>
+<p> SElinux should always be enabled: permissive or enforcing </p> 
+<p> 
+<ul> 
+  <li> getenforce shows the current State </li > 
+  <li> setenforce toggles between enforcing and permissive  </li >
+  Context management means applying contexts to files.
+  <li> File context labels are applied to every Object: user, rule, type</li>
+<li>semanage-fcontext : sets the file context label ( - a to set a new context label) ( -m to modify an existing context label ) </li >
+<li> When files are copied, they inherit the context type </li>
+</ul> 
+</p>
