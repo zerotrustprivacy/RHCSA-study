@@ -168,16 +168,20 @@ Study notes for the exam.
 <ul> 
   <li> getenforce shows the current SELinux state. </li> 
   <li> setenforce toggles between enforcing and permissive and sets them temporarily.</li>
-  <li>. To change the default mode persistently, you need to write it to /etc/sysconfig/selinux, or change GRUB kernel boot arguments.</li>
-  <p><img src="selinux.png"</p>
+  <p><img src="selinux.png"></p>
+  <li>To change the default mode persistently, you need to write it to /etc/sysconfig/selinux, or change GRUB kernel boot arguments.</li>
+  
   Context management means applying contexts to files.
   <li> File context labels are applied to every Object: user, rule, type</li>
 <li>semanage-fcontext : sets the file context label ( - a to set a new context label) ( -m to modify an existing context label ) </li >
 <li> When files are copied, they inherit the context type </li>
 </ul> 
 </p>
-<p>Setting Context Labels for Apache Document</p>
-<p>Install curl. Make a directory called "web" and create an index.html file within the directory. Then edit the httpd conf file by adding "/web" to the DocumentRoot parameter. Be sure that the following is also added to the file: <p> "<Directory "/web">
+<p>Example: Setting Context Labels for Apache Document</p>
+<p>Install curl. Make a directory called "web" and create an index.html file within the directory. Then edit the httpd conf file by adding "/web" to the DocumentRoot parameter. Be sure that the following is also added to the file: <p> "Directory "/web"
   AllowOverride None
   Require all granted
-</Directory>" </p> Enable the httpd service and then restart. Curl http://localhost to confirm that SELinux has not been set to permissive and you'll see that this not your webpage. Use "setenforce 0" and repeat the previous step.</p>
+Directory" </p> 
+<p><img src="selinux2.png"></p>
+Enable the httpd service and then restart. Curl http://localhost to confirm that SELinux has not been set to permissive and you'll see that this not your webpage. Use "setenforce 0" and repeat the previous step.</p>
+<p><img src="selinux3.png"></p>
