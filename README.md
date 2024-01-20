@@ -147,7 +147,7 @@ Study notes for the exam.
 <h2>Systemd</h2>
 <p>
 <ul>
-  <li> systemct1 edit unit.service : to edit unit files </li>
+  <li> systemctl edit unit.service : to edit unit files </li>
   <li>systemctl list-dependencies for a complete overview of dependencies</li>
   <li> Mask services : use Systemctl Stop (service) then systemctl mask (service) </li>
   <li>Example: systemctl Status httpd [disabled] ...systemctl enable httpd...</li>
