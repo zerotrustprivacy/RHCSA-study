@@ -166,8 +166,9 @@ Study notes for the exam.
 <p> SElinux should always be enabled: permissive or enforcing </p> 
 <p> 
 <ul> 
-  <li> getenforce shows the current State </li > 
-  <li> setenforce toggles between enforcing and permissive  </li >
+  <li> getenforce shows the current SELinux state. </li> 
+  <li> setenforce toggles between enforcing and permissive and sets them temporarily.</li>
+  <li>. To change the default mode persistently, you need to write it to /etc/sysconfig/selinux, or change GRUB kernel boot arguments.</li>
   <p><img src="selinux.png"</p>
   Context management means applying contexts to files.
   <li> File context labels are applied to every Object: user, rule, type</li>
