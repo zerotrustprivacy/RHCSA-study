@@ -185,4 +185,6 @@ Make a directory called "web" and create an index.html file within the directory
 Directory" </p> 
 <p><img src="selinux3.png"></p>
 Enable the httpd service and then restart. Curl http://localhost to confirm that SELinux has not been set to permissive and you'll see that this not your webpage. Use "setenforce 0" and repeat the previous step.</p>
+<p>Type semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?" to apply to the directory "/web"</p>
+<p>Type  restorecon -R -v /web. The restorecon command restores the default SELinux contexts so that changes made by the "semange fcontext" command are persistent.</p>
 
