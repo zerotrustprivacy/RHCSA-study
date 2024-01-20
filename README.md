@@ -168,6 +168,7 @@ Study notes for the exam.
 <ul> 
   <li> getenforce shows the current State </li > 
   <li> setenforce toggles between enforcing and permissive  </li >
+  <p><img src="selinux.png"</p>
   Context management means applying contexts to files.
   <li> File context labels are applied to every Object: user, rule, type</li>
 <li>semanage-fcontext : sets the file context label ( - a to set a new context label) ( -m to modify an existing context label ) </li >
