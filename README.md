@@ -178,10 +178,11 @@ Study notes for the exam.
 </ul> 
 </p>
 <p>Example: Setting Context Labels for Apache Document</p>
-<p>Install curl. Make a directory called "web" and create an index.html file within the directory. Then edit the httpd conf file by adding "/web" to the DocumentRoot parameter. Be sure that the following is also added to the file: <p> "Directory "/web"
+<p>Install curl. <p><img src="selinux2.png"></p>
+Make a directory called "web" and create an index.html file within the directory. Then edit the httpd conf file by adding "/web" to the DocumentRoot parameter. Be sure that the following is also added to the file: <p> "Directory "/web"
   AllowOverride None
   Require all granted
 Directory" </p> 
-<p><img src="selinux2.png"></p>
-Enable the httpd service and then restart. Curl http://localhost to confirm that SELinux has not been set to permissive and you'll see that this not your webpage. Use "setenforce 0" and repeat the previous step.</p>
 <p><img src="selinux3.png"></p>
+Enable the httpd service and then restart. Curl http://localhost to confirm that SELinux has not been set to permissive and you'll see that this not your webpage. Use "setenforce 0" and repeat the previous step.</p>
+
