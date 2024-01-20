@@ -177,7 +177,7 @@ Study notes for the exam.
 <li> When files are copied, they inherit the context type </li>
 </ul> 
 </p>
-<p>Example: Setting Context Labels for Apache Document</p>
+<h2>Example: Setting Context Labels for Apache Document</h2>
 <p>Install curl. <p><img src="selinux2.png"></p>
 Make a directory called "web" and create an index.html file within the directory. Then edit the httpd conf file by adding "/web" to the DocumentRoot parameter. Be sure that the following is also added to the file: <p> "Directory "/web"
   AllowOverride None
