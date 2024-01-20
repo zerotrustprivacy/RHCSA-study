@@ -163,7 +163,7 @@ Study notes for the exam.
 </ul>
 </p>
 <h2> SELinux </h2>
-<p> SElinux should always be enabled: permissive or enforcing </p> 
+<p>Security Enhanced Linux (SELinux) provides an additional layer of system security. It should always be enabled. There are two modes: permissive or enforcing. If permissive is enabled, no access is blocked. If enforcing is enabled, all restrictions are applied and SELinux is fully operational. </p> 
 <p> 
 <ul> 
   <li> getenforce shows the current SELinux state. </li> 
