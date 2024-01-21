@@ -186,4 +186,13 @@ Make a directory called "web" and create an index.html file within the directory
 Enable the httpd service and then restart. Curl http://localhost to confirm that SELinux has not been set to permissive and you'll see that this not your webpage. Use "setenforce 0" and repeat the previous step.</p>
 <p>Type semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?" to apply to the directory "/web"</p>
 <p>Type  restorecon -R -v /web. The restorecon command restores the default SELinux contexts so that changes made by the "semange fcontext" command are persistent.</p>
+<h2>SELinux Rules and Policies</h2>
+<p>
+  <ul>
+    <li>SELinux Booleans change the behavior of a rule. To change a Boolean, you can use "setsebool". To list all Booleans - "getsebool -a" or "semanage boolean -l" </li>
+    <li>To view logging, you need to access the audit log - "/var/log/audit/audit.log"... SELinux type is AVC so "grep AVC /var/log/audit/audit.log" will show the SELinux logs.</li>
+    <li>To understand the logs further, you can use "sealert -l UUID" for more information.</li>
+  </ul>
+</p>
 
+<h2>Firewalld</h2>
