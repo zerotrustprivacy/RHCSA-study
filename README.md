@@ -196,3 +196,7 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
 </p>
 
 <h2>Firewalld</h2>
+<p>Firewalld is a service that can configure firewall rules by using different interfaces. Administrators can manage rules but rules can also be added or removed without any direct action required of the system administrator.</p>
+<p>A zone is a collection of rules that are applied to incoming packets matching a specific source address or network interface.</p>
+<p>A Firewalld service - what should be accepted as incoming and outgoing traffic in the firewall. It typically includes ports to be opened, & kernel modules</p>
+<p>firewall-cmd -- is the cmdline tool used for firewall configuration.</p>
