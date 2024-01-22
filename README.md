@@ -249,9 +249,12 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
     <li>dnf install container-tools (view all supporting tools to work with containers)</li>
   </ul>
 </p>
-<p>git clone repository</p>
 <p>Move to the directory with the repo files: cd /rhcsa ... and list the files</p>
 <p>cat Containerfile</p>
+<p>git clone repository</p>
+<p>podman build -t mymap</p>
+<p>vim Containerfile add "-y" to the RUN section</p>
+
 <p>podman images then podman info to see all of the registries</p>
 <p>podman login registry.access.redhat.com</p>
 
