@@ -296,7 +296,7 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
   </ul>
 </p>
 --------------------------------------
-<h3></h3>
+<h3>Containers as Systemd Services</h3>
 <p>
   <ul>
     <li>loginctl enable-linger <user> to allow user services for a specific user (requires root privileges)</li>
