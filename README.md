@@ -31,7 +31,7 @@ Study notes for the exam.
   </ul></p>
 <h3>Using vim</h3> 
 <p>Create file by using the command "vim <file name> "</p>
-<p>When in vim use "i" to get to INSERT mode and begin typing.</p>
+<p>When in Vim use "i" to get to INSERT mode and begin typing.</p>
  <p>o = new line</p>
     <p>ctrl + c = command mode</p>
   <p>v = visual mode</p>
@@ -40,7 +40,7 @@ Study notes for the exam.
   <p>^ = start of the line</p>
   <p>:wq = save and exit</p>
 <h3>File System</h3>
-<p>Files on a linux system are organized into a single file-system hierarchy</p>
+<p>Files on a Linux system are organized into a single file-system hierarchy</p>
 <p>mkdir (make directory), rmdir (remove directory), cp (copy), and mv (move) are commands to manage files.</p>
 <p>Hard links</p>
 <p>Soft links</p>
@@ -197,6 +197,36 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
 
 <h2>Firewalld</h2>
 <p>Firewalld is a service that can configure firewall rules by using different interfaces. Administrators can manage rules but rules can also be added or removed without any direct action required of the system administrator.</p>
-<p>A zone is a collection of rules that are applied to incoming packets matching a specific source address or network interface.</p>
+<p>A zone is a collection of rules applied to incoming packets matching a specific source address or network interface.</p>
 <p>A Firewalld service - what should be accepted as incoming and outgoing traffic in the firewall. It typically includes ports to be opened, & kernel modules</p>
-<p>firewall-cmd -- is the cmdline tool used for firewall configuration.</p>
+<p>firewall-cmd -- is the cmd line tool used for firewall configuration.</p>
+<h2>Example: Configuring Automount</h2>
+<p>This example will show how to mount NFS server and NFS data automatically</p>
+<p>
+  <ul>
+    <li>dnf install -y autofs</li>
+    <li>cd /etc/ </li>
+    <li>vim auto.master (add /nfsdata    /etc/auto.nfsdata at the top of the file)</li>
+    <li>vim auto.misc </li>
+    <li>vim auto.nfsdata (files    -rw    nfsserver:/nfsdata)</li>
+    <li>systemctl enable --now autofs</li>
+    <li>ls /</li>
+    <li>cd /nfsdata</li>
+    <li>ls -al</li>
+    <li>cd files</li>
+    <li>mount | tail -3 (this will show the automount that was created)</li>
+  </ul>
+</p>
+<h3>Example: Automount on Home Directories</h3>
+<p>
+  <ul>
+    <li>showmount -e nfsserver: to check what is currently mounted</li>
+    <li>vim /etc/auto.master (/homes    /etc/auto.homes)</li>
+    <li>vim /etc/auto.homers (*    -rw    nfsserver:/home/ldap/&)</li>
+    <li>systemctl restart autofs</li>
+    <li>cd /homes</li>
+    <li>ls -a</li>
+
+  </ul>
+</p>
+<h2>Containers</h2>
