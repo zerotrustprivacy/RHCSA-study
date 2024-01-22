@@ -84,10 +84,10 @@ Study notes for the exam.
 <p><img src ="unmount.png"></p> 
 <h3> Create a Swap</h3>
 <p><img src ="swap.png"></p>
-
+-------------------------------------------------------------------
 <h3> Resize Logical Volumes and Volume Groups</h3>
 <p><img src="lvmgroups.png"</p>
-  
+ --------------------------------------------------------------------------- 
 <h3>Schedule Jobs </h3> 
 <p>Schedule jobs to run  on a repeating schedule with a user's crontab file. </p>
 <p> "man at" shows how to execute schedule jobs. These are one time jobs. For example: "at now +3min" runs a job 3 min from now.</p>
@@ -101,7 +101,7 @@ Study notes for the exam.
   <li>Day of Week</li>
   <li>Command</li>
 </ul></p></p>
-
+---------------------------------------------------------------------
 <h3>Manage Temporary Files</h3>
 <p>Red Hat includes the systemd-tmpfiles tool - provides a method to manage temporary directories and files. The systemd-tmpfiles-setup service runs the systemd-tmpfiles command.</p>
 <p>systemd-tmpfiles-clean service configuration files exist in three places:
@@ -110,7 +110,7 @@ Study notes for the exam.
 /usr/lib/tmpfiles.d/*.conf</p>
 <p> In the config file, specify what to do... echo "d/etc/</p>
 
-
+-----------------------------------------------------------------------
 <h3>Analyze and Store Logs</h3>
 <p>The rsyslog service is used to determine for handle log messages. </p>
 <p>The logrotate command rotates log files to prevent them from taking too much space in the /var/log directory. When a log is rotated, it is renamed with an extension.</p>
@@ -120,12 +120,12 @@ Study notes for the exam.
 <p>-b shows the current system boot</p>
 <p>The system has its own journal located at system.journal. Indiviual users have their own journals pertaining to their own transacions inside of file called user-userid </p>
 <p>Updating Time Zones: Use the command tzselect to view the appropriate time zone. Then use "timedatectl set-timezone" command to set the time zone.</p>
-
+----------------------------------------------------------------------------
 <h3>Manage Compressed tar Archives</h3>
 <p>An archive is a file that contains multiple files. "tar" is the command to create manage and extract archives. </p>
 <p>Command: dnf list - lists installed and available packages</p>
 <p> Use dnf install -y software to install </p>
-
+----------------------------------------------------------------------------------
 <h3> Manage Process and jobs</h3>
 <p>command & starts a job in the background.</p> 
 <p>Jobs- to view all running jobs </p>
@@ -144,6 +144,7 @@ Study notes for the exam.
   </ul> 
 </p>
 </p>
+    -------------------------------------------------------------------------------------------
 <h2>Systemd</h2>
 <p>
 <ul>
@@ -162,6 +163,7 @@ Study notes for the exam.
   <li>Make sure that the /var/log/journal exists</li>
 </ul>
 </p>
+-----------------------------------------------------------------------
 <h2> SELinux </h2>
 <p>Security Enhanced Linux (SELinux) provides an additional layer of system security. It should always be enabled. There are two modes: permissive or enforcing. If permissive is enabled, no access is blocked. If enforcing is enabled, all restrictions are applied and SELinux is fully operational. </p> 
 <p> 
@@ -194,12 +196,13 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
     <li>To understand the logs further, you can use "sealert -l UUID" for more information.</li>
   </ul>
 </p>
-
+---------------------------------------------------------
 <h2>Firewalld</h2>
 <p>Firewalld is a service that can configure firewall rules by using different interfaces. Administrators can manage rules but rules can also be added or removed without any direct action required of the system administrator.</p>
 <p>A zone is a collection of rules applied to incoming packets matching a specific source address or network interface.</p>
 <p>A Firewalld service - what should be accepted as incoming and outgoing traffic in the firewall. It typically includes ports to be opened, & kernel modules</p>
 <p>firewall-cmd -- is the cmd line tool used for firewall configuration.</p>
+-------------------------------------------------------------
 <h2>Example: Configuring Automount</h2>
 <p>This example will show how to mount NFS server and NFS data automatically</p>
 <p>
@@ -228,6 +231,8 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
     <li>ls -a</li>
   </ul>
 </p>
+-------------------------------------------------------------
+-------------------------------------------
 <h2>Containers</h2>
 <h3>A container has all that is needed to run an application. They are started from container images. Images are provided in image registries.</h3>
 <p>Features:</p>
@@ -252,9 +257,23 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
 <p>Move to the directory with the repo files: cd /rhcsa ... and list the files</p>
 <p>cat Containerfile</p>
 <p>git clone repository</p>
-<p>podman build -t mymap</p>
-<p>vim Containerfile add "-y" to the RUN section</p>
-
 <p>podman images then podman info to see all of the registries</p>
 <p>podman login registry.access.redhat.com</p>
-
+<p>podman build -t mymap</p>
+<p>vim Containerfile add "-y" to the RUN section</p>
+--------------------------------------------------------------------------------
+<h3>Common Podman Commands</h3>
+<p>
+  <ul>
+    <li>podman search: searches registries for images</li>
+    <li>podman run: runs a container</li>
+    <li>podman stop: stops a currently running container</li>
+    <li>podman ps: show information about containers</li>
+    <li>podman build: build an image from a Containerfile</li>
+    <li>podman images: lists images</li>
+    <li>podman inspect: shows container or image details</li>
+    <li>podman pull: pulls an image from the registry</li>
+    <li>podman exec: executes a command in a running container</li>
+    <li>podman rm: removes a container</li>
+  </ul>
+</p>
