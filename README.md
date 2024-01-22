@@ -45,8 +45,8 @@ Study notes for the exam.
 <p>Hard links</p>
 <p>Soft links</p>
 
-<h3>Configuration Files</h3>
-<h4>Important File Locations</h4>
+<h2>Configuration Files</h2>
+<h3>Important File Locations</h3>
 <ul>
   <li>Source File: ~/.bashrc</li>
   <li>Password Config: /etc/login.defs/user</li>
@@ -183,7 +183,7 @@ Make a directory called "web" and create an index.html file within the directory
 <p>Then edit the httpd conf file by adding "/web" to the DocumentRoot parameter. Be sure that the following is also added to the file:</p>
 <p> <img src="selinux4.png"></p> 
 
-Enable the httpd service and then restart. Curl http://localhost to confirm that SELinux has not been set to permissive and you'll see that this not your webpage. Use "setenforce 0" and repeat the previous step.</p>
+Enable the httpd service and then restart. Curl http://localhost to confirm that SELinux has not been set to permissive and you'll see that this is not your webpage. Use "setenforce 0" and repeat the previous step.</p>
 <p>Type semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?" to apply to the directory "/web"</p>
 <p>Type  restorecon -R -v /web. The restorecon command restores the default SELinux contexts so that changes made by the "semange fcontext" command are persistent.</p>
 <h2>SELinux Rules and Policies</h2>
@@ -226,7 +226,32 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
     <li>systemctl restart autofs</li>
     <li>cd /homes</li>
     <li>ls -a</li>
-
   </ul>
 </p>
 <h2>Containers</h2>
+<h3>A container has all that is needed to run an application. They are started from container images. Images are provided in image registries.</h3>
+<p>Features:</p>
+<p>
+  <ul>
+    <li>Control groups - set limits to the amount of resources that can be used</li>
+    <li>Namespaces - provide isolation so that containers only have access to their data and configuration</li>
+</ul></p>
+<p>Containers need a user ID to be started. Root containers are started by the root users. Rootless containers are started by non-root users.</p>
+<p>Normally each container runs one application.</p>
+<p>Podman manages containers and container images</p>
+<p>Container images are used to package container applications with all of their dependencies.</p>
+<p>podman login registry.redhat.io</p>
+<p>Configure Registry Access</p>
+<p>
+  <ul>
+    <li>Registry access is configured in /etc/containers/registries.conf</li>
+    <li>Container file - text file with instructions to build a custom container image</li>
+    <li>dnf install container-tools (view all supporting tools to work with containers)</li>
+  </ul>
+</p>
+<p>git clone repository</p>
+<p>Move to the directory with the repo files: cd /rhcsa ... and list the files</p>
+<p>cat Containerfile</p>
+<p>podman images then podman info to see all of the registries</p>
+<p>podman login registry.access.redhat.com</p>
+
