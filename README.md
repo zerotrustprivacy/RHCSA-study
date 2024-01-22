@@ -277,3 +277,35 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
     <li>podman rm: removes a container</li>
   </ul>
 </p>
+
+<h3>Trouble shooting containers</h3>
+<p>Use "podman inspect container"</p>
+<p><b>podman logs</b>: explore logs created by the container</p>
+<p>Container access happens through port mappings. A port on the container host is exposed and forwards traffic to the container port. </p>
+<p>podman run -d -p {portnumber}</p>
+--------------------------------------------
+<h3>Persistent Storage in Containers</h3>
+<p>
+  <ul>
+    <li>Persistent storage is made by creating a directory on the container host and mounting that directory using <b>podman run -d... -v /hostdir:/containerdir</b></li>
+    <li>Namespaces provide isolation for the container and give it root access.</li>
+    <li>Rootless containers are launched in a namespace</li>
+    <li>The podman unshare command is used to run commands inside the container namespace</li>
+    <li>To see appropriate directory ownership for rootless containers, you must first find the UID of the user that runs the main application (<b>podman inspect imagename</b>)</li>
+    <li>Use podman unshare chown nn:nn directoryname to set the container UID as the owner of the directory on the host</li>
+  </ul>
+</p>
+--------------------------------------
+<h3></h3>
+<p>
+  <ul>
+    <li>loginctl enable-linger <user> to allow user services for a specific user (requires root privileges)</li>
+      <li>Create a regular user account to manage all containers</li>
+      <li>mkdir ~/.config/systemd/user; cd ~/.config/systemd/user</li>
+      <li>Use podman to generate a user systems file for an existing container</li>
+      <li>To generate a service file for a root container, do it from /etc/systemd/system </li>
+      <li><b>podman generate --new</b> : creates a new container when the system unit is started and deletes it when the unit is stopped.</li>
+      <li>Edit the file that is generated and change the "WantedBy" line to "WantedBy=default.target"</li>
+      <li>Manage them by using systemctl --user commands.</li>
+  </ul>
+</p>
