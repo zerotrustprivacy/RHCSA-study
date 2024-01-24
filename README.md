@@ -203,8 +203,19 @@ Enable the httpd service and then restart. Curl http://localhost to confirm that
 <p>A Firewalld service - what should be accepted as incoming and outgoing traffic in the firewall. It typically includes ports to be opened, & kernel modules</p>
 <p>firewall-cmd -- is the cmd line tool used for firewall configuration.</p>
 -------------------------------------------------------------
-<h2>Example: Configuring Automount</h2>
-<p>This example will show how to mount NFS server and NFS data automatically</p>
+<h2>Automount</h2>
+<p>The /etc/fstab file can be used to mount the NFS file system</p>
+<p>Within the file, you have 6 columns:</p>
+<ol>
+<li>server+share directory</li>
+<li>directory where you mount NFS share</li>
+<li>file system type (nfs)</li>
+<li>specify mount options (defaults)</li>
+<li>0</li>
+<li>0</li>
+</ol>
+<h3>Example: Configuring Automount</h3>
+<p>This example will show how to mount NFS server and NFS data automatically using <b>autofs</b></p>
 <p>
   <ul>
     <li>dnf install -y autofs</li>
