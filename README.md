@@ -144,7 +144,21 @@ Study notes for the exam.
   </ul> 
 </p>
 </p>
-    -------------------------------------------------------------------------------------------
+--------------------------------------------------------------
+    <h3>Creating Logical Volumes</h3>
+  <p>
+    <p> Creating Logical volumes involves 4 steps :</p>
+    <p>
+      <ol>
+        <li> Convert physical devices into physical volumes: pvcreate </li>
+        <li> Create the volume group and assign PVs to it: vgcreate (the name of the physical volume)(the location of the pv) </li>
+        <li> Create the logical volume: lvcreate-n (the name of the lv) -L (the size of the lv) </li>
+        <li> Make a file system on top of the logical volume: mkfs.ext4 /dev/(vg name)/(lv name)</li>
+      </ol>
+    </p>
+    <p> Use lsblk to view the physical devices on the server</p>
+  </p>
+    ----------------------------------------------------------------------------
 <h2>Systemd</h2>
 <p>
 <ul>
